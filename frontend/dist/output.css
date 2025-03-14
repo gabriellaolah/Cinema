@@ -1,0 +1,28 @@
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; transform: translate(1px, -1px); }
+    20% { text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00ffff; transform: translate(-1px, 1px); }
+    40% { text-shadow: 2px -2px 0px #ff00ff, -2px 2px 0px #00ffff; transform: translate(1px, 0px); }
+    60% { text-shadow: -2px 2px 0px #ff00ff, 2px -2px 0px #00ffff; transform: translate(-1px, -1px); }
+    80% { text-shadow: 4px 4px 0px #ff00ff, -4px -4px 0px #00ffff; transform: translate(2px, -2px); }
+    100% { text-shadow: -4px -4px 0px #ff00ff, 4px 4px 0px #00ffff; transform: translate(-2px, 2px); }
+}
+
+.glitch-text {
+    animation: glitch 0.8s infinite alternate;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block; /* Helps animation */
+}
+
+@keyframes vhs-glitch {
+    0% { transform: scale(1) translate(0, 0); filter: contrast(100%) brightness(100%); }
+    25% { transform: scale(1.02) translate(-2px, 2px); filter: contrast(120%) brightness(110%); }
+    50% { transform: scale(0.98) translate(2px, -2px); filter: contrast(90%) brightness(95%); }
+    75% { transform: scale(1.01) translate(-1px, 1px); filter: contrast(105%) brightness(102%); }
+    100% { transform: scale(1) translate(0, 0); filter: contrast(100%) brightness(100%); }
+}
+
+.vhs-glitch:hover {
+    animation: vhs-glitch 0.3s steps(2, end) infinite;
+}

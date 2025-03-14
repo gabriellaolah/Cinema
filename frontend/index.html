@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Husets Biograf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Grainy VHS effect */
+        body {
+            background-color: #0a0a0a;
+            background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+        }
+        .glitch {
+            text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff;
+        }
+    </style>
+</head>
+<body class="text-white font-mono">
+
+
+    <!--  Header / Navigation -->
+    <header class="bg-black py-4 text-center">
+        <h1 class="text-4xl glitch font-bold">Husets Biograf</h1>
+        <nav class="mt-2">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#" class="hover:text-red-500">Home</a></li>
+                <li><a href="#" class="hover:text-red-500">Programme</a></li>
+                <li><a href="#" class="hover:text-red-500">Events</a></li>
+                <li><a href="#" class="hover:text-red-500">About</a></li>
+                <li><a href="#" class="hover:text-red-500">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🎞️ This Week at Husets - Multi-Movie Carousel -->
+<section class="mt-12 text-center">
+    <h2 class="text-3xl font-bold glitch-text">📅 This Week at Husets</h2>
+
+    <div id="weeklyMoviesCarousel" class="carousel slide mx-auto max-w-4xl bg-black p-4 rounded-lg" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="./pictures/himiko.jpg" class="d-block w-100 rounded-lg" alt="Himiko">
+                        <p class="mt-2 text-lg font-bold">Monday: Himiko - 19:00</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./pictures/kultfilm.jpg" class="d-block w-100 rounded-lg" alt="Den fantastiske kultfilm quiz">
+                        <p class="mt-2 text-lg font-bold">Tuesday: Den fantastiske kultfilm quiz - 19:00</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./pictures/iron-maiden.jpg" class="d-block w-100 rounded-lg" alt="Iron Maiden Live!">
+                        <p class="mt-2 text-lg font-bold">Thursday: Iron Maiden Live! - 19:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="./pictures/dive-in.jpg" class="d-block w-100 rounded-lg" alt="Dive-in 48">
+                        <p class="mt-2 text-lg font-bold">Friday: Dive-in 48 - Kick Off: The Filmmaking Marathon 2025 - 16:00</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./pictures/tangerine.jpg" class="d-block w-100 rounded-lg" alt="Tangerine">
+                        <p class="mt-2 text-lg font-bold">Friday: Dive-in 48 Presents - Tangerine (2015) 10 Year Anniversary Special - 20:00</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./pictures/dive-in.jpg" class="d-block w-100 rounded-lg" alt="The Grand Finale">
+                        <p class="mt-2 text-lg font-bold">Sunday: The Grand Finale - Screening of Short Films and Award Ceremony - 20:00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#weeklyMoviesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#weeklyMoviesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+
+    <!--  Recurring Cult Classics -->
+    <section class="mt-12 text-center">
+        <h2 class="text-3xl font-bold glitch-text">Recurring Cult Classics</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">
+            <div class="vhs-container">
+                <img src="./pictures/rocky-horror.jpg" alt="Rocky Horror" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">Rocky Horror Picture Show</p>
+            </div>
+            <div class="vhs-container">
+                <img src="./pictures/the-room.jpg" alt="The Room" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">The Room</p>
+            </div>
+            <div class="vhs-container">
+                <img src="./pictures/big-lebowski.jpg" alt="Big Lebowski" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">The Big Lebowski</p>
+            </div>
+        </div>
+    </section>
+
+    <!--  Upcoming Mayhem (Events) -->
+    <section class="mt-12 text-center">
+        <h2 class="text-3xl font-bold glitch-text">Upcoming Mayhem</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+            <div class="vhs-container">
+                <img src="./pictures/bad-movie-club.jpg" alt="Bad Movie Club" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">Bad Movie Club - March 20</p>
+            </div>
+            <div class="vhs-container">
+                <img src="./pictures/kultfilm.jpg" alt="Film Quiz" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">Den Fantastiske Kulfilm Quiz - March 25</p>
+            </div>
+        </div>
+    </section>
+
+    <!--  Footer -->
+    <footer class="bg-black text-center py-6 mt-12">
+        <p>© 2025 Husets Biograf | VHS Forever</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JS (required for the carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

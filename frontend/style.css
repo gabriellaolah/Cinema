@@ -1,0 +1,82 @@
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; transform: translate(1px, -1px); }
+    20% { text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00ffff; transform: translate(-1px, 1px); }
+    40% { text-shadow: 2px -2px 0px #ff00ff, -2px 2px 0px #00ffff; transform: translate(1px, 0px); }
+    60% { text-shadow: -2px 2px 0px #ff00ff, 2px -2px 0px #00ffff; transform: translate(-1px, -1px); }
+    80% { text-shadow: 4px 4px 0px #ff00ff, -4px -4px 0px #00ffff; transform: translate(2px, -2px); }
+    100% { text-shadow: -4px -4px 0px #ff00ff, 4px 4px 0px #00ffff; transform: translate(-2px, 2px); }
+}
+
+.glitch-text {
+    animation: glitch 0.8s infinite alternate;
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block; /* Helps animation */
+}
+body {
+    background-color: #0a0a0a !important;
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    background-repeat: repeat;
+}
+
+/* 🎞️ Make sure text color is white */
+.text-white {
+    color: white !important;
+}
+
+/* VHS Glitch - Subtle TV Distortion */
+@keyframes subtle-vhs-glitch {
+    0% { transform: translate(0px, 0px) scale(1); filter: contrast(100%) brightness(100%); }
+    25% { transform: translate(-1px, 1px) scale(1.01); filter: contrast(105%) brightness(102%); }
+    50% { transform: translate(1px, -1px) scale(1); filter: contrast(110%) brightness(103%); }
+    75% { transform: translate(-0.5px, 0.5px) scale(1.005); filter: contrast(108%) brightness(101%); }
+    100% { transform: translate(0px, 0px) scale(1); filter: contrast(100%) brightness(100%); }
+}
+
+.vhs-glitch {
+    animation: subtle-vhs-glitch 3s infinite alternate ease-in-out; /* ✅ Slow, smooth distortion */
+}
+
+
+/* VHS Static Noise Effect */
+.vhs-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.vhs-static {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./pictures/static-noise.png') repeat;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none; /* Prevents interfering with clicking */
+}
+
+.vhs-container:hover .vhs-static {
+    opacity: 0.4; /* Adjust transparency for a subtle effect */
+}
+
+/* 🎞️ Make the carousel larger for 3 movies */
+#weeklyMoviesCarousel {
+    max-width: 900px; /* ✅ Make it wide enough for 3 movies */
+    margin: auto;
+}
+
+/* 🎞️ Ensure images inside carousel are spaced evenly */
+.carousel-item .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-height: 250px; /* ✅ Keep the images at a good height */
+    object-fit: cover;
+    border-radius: 8px; /* ✅ Smooth edges */
+}
