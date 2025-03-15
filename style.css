@@ -80,3 +80,15 @@ body {
     object-fit: cover;
     border-radius: 8px; /* ✅ Smooth edges */
 }
+/* Reduce Section Size */
+.upcoming-mayhem {
+    max-width: 800px;  /* Limit width */
+    margin: 0 auto;    /* Center content */
+    padding: 30px 15px; /* Reduce padding */
+}
+/* Reduce Image Size */
+.upcoming-mayhem img {
+    max-width: 70%;  /* Make images smaller */
+    height: auto;    /* Keep aspect ratio */
+    margin: 10px auto; /* Add spacing */
+}
