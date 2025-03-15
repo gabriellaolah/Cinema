@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Playing | Husets Biograf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white font-mono bg-black">
+
+    <header class="bg-black py-4 text-center">
+        <h1 class="text-4xl glitch font-bold">🎞️ Now Playing, Baby!</h1>
+        <nav class="mt-2">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="cult-classics.html" class="hover:text-red-500">🍿 Cult Trash & Treasures</a></li>
+                <li><a href="vault.html" class="hover:text-red-500">🎥 From the Vault</a></li>
+                <li><a href="about.html" class="hover:text-red-500">🚬 Step Into the Red Room</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 🎞️ Daily Programme (Will Be Dynamic) -->
+    <section class="mt-12 text-center">
+        <h2 class="text-3xl font-bold glitch-text">📅 Tonight’s Feature</h2>
+        <div id="programme-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+            <!-- Movies will be inserted here dynamically from Sanity CMS -->
+        </div>
+    </section>
+
+    <!-- 🔥 Special Screenings (Recurring Events) -->
+    <section class="mt-12 text-center">
+        <h2 class="text-3xl font-bold glitch-text">🔥 Cult Trash & Treasures</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">
+            <div class="vhs-container">
+                <img src="./pictures/rocky-horror.jpg" alt="Rocky Horror" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">Rocky Horror Picture Show - Last Friday of Every Month</p>
+            </div>
+            <div class="vhs-container">
+                <img src="./pictures/the-room.jpg" alt="The Room" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">The Room - Monthly Disaster</p>
+            </div>
+            <div class="vhs-container">
+                <img src="./pictures/big-lebowski.jpg" alt="Big Lebowski" class="w-full rounded-lg vhs-glitch">
+                <p class="vhs-static">The Big Lebowski Drink-Along</p>
+            </div>
+        </div>
+    </section>
+
+    <!--  Footer -->
+    <footer class="bg-black text-center py-6 mt-12">
+        <p>© 2025 Husets Biograf | VHS Forever</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
