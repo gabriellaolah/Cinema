@@ -1,18 +1,17 @@
-import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import { defineConfig } from 'sanity'
+import { deskTool } from 'sanity/desk'
+import { schemaTypes } from './schemaTypes' //  Import the schemaTypes array
 
 export default defineConfig({
   name: 'default',
-  title: 'Cinema',
+  title: 'Cinema Sanity',
 
-  projectId: '4ggeo8s8',
+  projectId: '4ggeo8s8',  // Replace with actual project ID
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [deskTool()],
 
   schema: {
-    types: schemaTypes,
+    types: schemaTypes, //  Use schemaTypes array
   },
-})
+});
