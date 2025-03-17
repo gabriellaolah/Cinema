@@ -1,0 +1,20 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Vite build files
+dist/
+.vite/
+.cache/
+
+# Sanity Studio files (if not needed in Git)
+sanity-studio/.next/
+sanity-studio/node_modules/
+sanity-studio/dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
