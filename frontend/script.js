@@ -1,5 +1,6 @@
 import { sanity } from "./sanityClient.js";  //  Import the Sanity client
-import imageUrlBuilder from "@sanity/image-url";
+import imageUrlBuilder from "../node_modules/@sanity/image-url";
+
 
 const builder = imageUrlBuilder(sanity);
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const programmeContainer = document.getElementById("programme-container");
 
   try {
+    console.log("✅ Movies fetched from Sanity:", movies);
     const movies = await sanity.fetch(
       `*[_type == "movie"] | order(date asc) {
         title, 

@@ -1,9 +1,7 @@
 {
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.14",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.14",
+    "@tailwindcss/postcss": "^4.0.14",
     "vite": "^6.2.2"
   },
   "name": "cinema",
@@ -11,6 +9,9 @@
   "description": "",
   "main": "script.js",
   "dependencies": {
+    "@sanity/client": "^6.28.3",
+    "@sanity/image-url": "^1.1.0",
+    "autoprefixer": "^10.4.21",
     "browserslist": "^4.24.4",
     "caniuse-lite": "^1.0.30001704",
     "electron-to-chromium": "^1.5.118",
@@ -20,11 +21,14 @@
     "node-releases": "^2.0.19",
     "normalize-range": "^0.1.2",
     "picocolors": "^1.1.1",
+    "postcss": "^8.5.3",
     "postcss-value-parser": "^4.2.0",
     "source-map-js": "^1.2.1",
+    "tailwindcss": "^4.0.14",
     "update-browserslist-db": "^1.1.3"
   },
   "scripts": {
+    "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
