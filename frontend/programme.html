@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Now Playing | Husets Biograf</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/programme.css">
 </head>
 <body class="text-white font-mono bg-black">
 
+    <!-- 🎭 Header with Marquee Effect -->
     <header class="bg-black py-4 text-center">
-        <h1 class="text-4xl glitch font-bold">🎞️ Now Showing!</h1>
+        <div class="marquee-container">
+            <h1 class="marquee-title">🎞️ Now Showing!</h1>
+        </div>
         <nav class="mt-2">
             <ul class="flex justify-center space-x-6">
                 <li><a href="index.html" class="hover:text-red-500">Home</a></li>
@@ -21,17 +24,17 @@
         </nav>
     </header>
 
-    <!-- 🎞️ Daily Programme (Will Be Dynamic) -->
+    <!-- 🎞️ Daily Programme - Styled like an old-school schedule board -->
     <section class="mt-12 text-center">
-        <h2 class="text-3xl font-bold glitch-text">📅 Tonight’s Feature</h2>
-        <div id="programme-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-            <!-- Movies will be inserted here dynamically from Sanity CMS -->
+        <h2 class="text-3xl font-bold glitch-text">📅 Tonight's Feature</h2>
+        <div id="programme-container" class="schedule-board">
+            <!-- Movies will be inserted here dynamically from Strapi -->
         </div>
     </section>
 
     <!-- 🔥 Special Screenings (Recurring Events) -->
     <section class="mt-12 text-center">
-        <h2 class="text-3xl font-bold glitch-text">🔥 Cult Classics</h2>
+        <h2 class="text-3xl font-bold">🔥 Cult Classics</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 p-6">
             <div class="vhs-container">
                 <img src="./pictures/rocky-horror.jpg" alt="Rocky Horror" class="w-full rounded-lg vhs-glitch">
@@ -53,9 +56,8 @@
         <p>© 2025 Husets Biograf | Copenhagen's oldest underground cinema</p>
     </footer>
 
-    <script type="module" src="./sanityClient.js"></script>
+    <!-- ✅ Removed Sanity references, keeping only the correct script -->
     <script type="module" src="./script.js"></script>
-
 
 </body>
 </html>

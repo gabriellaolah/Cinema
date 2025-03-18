@@ -1,0 +1,133 @@
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+.marquee-title {
+    animation: flicker 2s infinite alternate;
+}
+
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff; transform: translate(1px, -1px); }
+    20% { text-shadow: -2px -2px 0px #ff00ff, 2px 2px 0px #00ffff; transform: translate(-1px, 1px); }
+    40% { text-shadow: 2px -2px 0px #ff00ff, -2px 2px 0px #00ffff; transform: translate(1px, 0px); }
+    60% { text-shadow: -2px 2px 0px #ff00ff, 2px -2px 0px #00ffff; transform: translate(-1px, -1px); }
+    80% { text-shadow: 4px 4px 0px #ff00ff, -4px -4px 0px #00ffff; transform: translate(2px, -2px); }
+    100% { text-shadow: -4px -4px 0px #ff00ff, 4px 4px 0px #00ffff; transform: translate(-2px, 2px); }
+}
+
+.glitch-text {
+    animation: glitch 0.8s infinite alternate;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+/* Cinema Sign Styling */
+.marquee-container {
+    background: linear-gradient(to bottom, #5A0000, #8B0000); /* Darker, rich red */
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.5);
+    border: 4px solid gold;
+}
+
+/* Improved marquee text */
+.marquee-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    color: gold;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(255, 215, 0, 0.8);
+    animation: flicker 2.5s infinite alternate;
+}
+
+/* Classic Movie Listings Board */
+.schedule-board {
+    background: black;
+    color: gold;
+    font-family: 'Courier New', monospace;
+    padding: 25px;
+    border: 3px solid gold;
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    box-shadow: 0px 0px 15px rgba(139, 0, 0, 0.6);
+    text-align: left;
+}
+
+/* Movie listings should feel like a real schedule */
+.schedule-board div {
+    padding: 15px;
+    border-bottom: 1px dashed gold;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.schedule-board div:nth-child(even) {
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* VHS Glitch Stays for Recurring Cult Classics */
+.vhs-glitch {
+    animation: subtle-vhs-glitch 3s infinite alternate ease-in-out;
+}
+
+/* VHS Static Overlay */
+.vhs-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.vhs-static {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.vhs-container:hover .vhs-static {
+    opacity: 0.4; /* Subtle effect */
+}
+
+body {
+    background: linear-gradient(to bottom, #3D0000, #5B0000); /* Darker red */
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle fabric-like grain */
+    background-repeat: repeat;
+}
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: gold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(255, 215, 0, 0.7);
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+body {
+    background: linear-gradient(to bottom, #2D0000, #5A0000); /* Darker, richer red */
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png'); /* Grain effect */
+    background-repeat: repeat;
+    padding-bottom: 50px;
+}
+nav a {
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: gold;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8);
+}
+
+
+
