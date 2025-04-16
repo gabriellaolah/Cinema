@@ -2,7 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Just for testing */
-body {
-  @apply bg-black text-white font-mono;
-}
+
