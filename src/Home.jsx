@@ -4,18 +4,17 @@ export default function Home() {
   return (
     <main className="bg-black text-white font-alt min-h-screen relative overflow-hidden z-10">
 
-      {/* 🔁 Background VHS Static Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="fixed top-0 left-0 w-full h-full object-cover z-0 opacity-10 mix-blend-overlay pointer-events-none"
-      >
-        <source src="/static.mp4" type="video/mp4" />
-      </video>
+      {/* Background static + grain + flicker layers */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div
+        className="absolute inset-0 bg-[url('/public/images/paper-texture.jpg')] mix-blend-overlay opacity-10"
+      />
+      <div
+        className="absolute inset-0 bg-[url('/static-lines.png')] mix-blend-overlay opacity-10 animate-flicker"
+      />
+      </div>
 
-      {/* 🕒 Fake Timestamp HUD */}
+      {/* Fake Timestamp HUD */}
       <div className="absolute top-6 left-6 text-green-400 font-mono text-xs opacity-70 z-50">
         ▶ PLAY&nbsp;&nbsp;&nbsp;00:00:17&nbsp;&nbsp;&nbsp;SP
       </div>
